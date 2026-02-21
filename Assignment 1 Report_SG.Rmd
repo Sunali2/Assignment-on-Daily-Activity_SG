@@ -47,7 +47,7 @@ print(mean_steps_imputed)
 print(median_steps_imputed)
 ```
 #Question 4: Are there differences in activity patterns between weekdays and weekends?
-```{r, echo=TRUE}}
+```{r, echo=TRUE}
 activity_imputed <- activity %>%
   group_by(interval) %>%
   mutate(steps = ifelse(is.na(steps), mean(steps, na.rm = TRUE), steps))
@@ -67,3 +67,4 @@ plot(x=Mean_steps_by_interval_weekend$interval, y=Mean_steps_by_interval_weekend
 ```{r}
 
 ```
+
